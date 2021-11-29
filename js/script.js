@@ -14,3 +14,4 @@ console.log(doubler(5));
 (function(kihobe) {
     console.log("kodu baba" + kihobe);
 })(" kemon aso");
+console.log(document.getElementById("hours"));
