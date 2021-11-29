@@ -1,17 +1,11 @@
-function makeMultiplier(multiplier) {
-    function b() {
-        console.log("multiplier is " + multiplier);
+function sayHello() {
+    var name = document.getElementById("name").value
+    var message = "<h2>Hello " + name + "!</h2>";
+    document.getElementById("content").innerHTML = message;
+
+    if (name === "student") {
+        var title = document.querySelector("#koduid").textContent;
+        title += " & He is using it";
+        document.querySelector("#koduid").textContent = title;
     }
-    b();
-    return (
-        function(x) {
-            return x * multiplier;
-        }
-    );
 }
-var doubler = makeMultiplier(2);
-console.log(doubler(5));
-(function(kihobe) {
-    console.log("kodu baba" + kihobe);
-})(" kemon aso");
-console.log(document.getElementById("hours"));
