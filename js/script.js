@@ -1,20 +1,16 @@
-var message = "in global";
-console.log("global: message = " + message);
-
-var a = function() {
-    var message = "inside a";
-    console.log("a: message = " + message);
-    c();
-    b();
-
+function makeMultiplier(multiplier) {
     function b() {
-        console.log("b: message = " + message);
+        console.log("multiplier is " + multiplier);
     }
+    b();
+    return (
+        function(x) {
+            return x * multiplier;
+        }
+    );
 }
-
-function c() {
-    console.log("b: message = " + message);
-}
-
-
-a();
+var doubler = makeMultiplier(2);
+console.log(doubler(5));
+(function(kihobe) {
+    console.log("kodu baba" + kihobe);
+})(" kemon aso");
